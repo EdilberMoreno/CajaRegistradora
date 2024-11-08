@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caja Registradora</title>
+    
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-3">
+        <h1>Caja Registradora</h1>
+    </header>
+
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- Panel izquierdo -->
+            <div class="col-md-4">
+                <label for="productos">Productos disponibles</label>
+                <select id="productos" class="form-control">
+                    <option value="3000" data-name="Xiaomi Redmi Note 13 Pro">Celular Xiaomi Redmi Note 13 Pro - $3000</option>
+                    <option value="4000" data-name="Motorola Moto G50 Edge">Celular Motorola Moto G50 Edge - $4000</option>
+                    <option value="5000" data-name="Samsung Galaxy S20">Celular Samsung Galaxy S20 - $5000</option>
+                    <option value="10000" data-name="Iphone 13 Pro">Iphone 13 Pro - $10000</option>
+                    <option value="8000" data-name="Oppo Reno 11">Oppo Reno 11 - $8000</option>
+                </select>
+
+                <label for="producto-seleccionado">Producto seleccionado</label>
+                <input type="text" id="producto-seleccionado" class="form-control" readonly>
+
+                <label for="cantidad">Cantidad</label>
+                <input type="number" id="cantidad" class="form-control" min="1" required step="1" value="1">
+
+                <label for="subtotal">Subtotal</label>
+                <input type="text" id="subtotal" class="form-control" readonly>
+
+                <div class="mt-3">
+                    <button id="comprar" class="btn btn-success btn-block" disabled>Añadir al carrito</button>
+                    <button id="limpiar" class="btn btn-danger btn-block" disabled>Limpiar compra</button>
+                    <button id="añadir-producto" class="btn btn-dark btn-block">Crear producto</button>
+                </div>
+            </div>
+
+            <!-- Panel derecho -->
+            <div class="col-md-8">
+                <label for="productos">Resumen de Compra</label>
+                <table id="tabla-productos" class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Eliminar</th>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+                <div class="d-flex justify-content-between">
+                    <button id="calcular-total" class="btn btn-success" disabled>Confirmar Compra</button>
+                    <button id="eliminar-seleccionados" class="btn btn-danger" disabled>Eliminar producto</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script src="Js/main.js"></script>
+</body>
+</html>
